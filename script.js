@@ -130,3 +130,22 @@ function handleKeyPress(event) {
         }
     }
 }
+
+// Función para alternar entre modos claro y oscuro
+function toggleTheme() {
+    const calculator = document.getElementById('calculator');
+    const themeToggleBtn = document.getElementById('theme-toggle');
+
+    // Alternar la clase 'dark-mode' en el contenedor de la calculadora
+    calculator.classList.toggle('dark-mode');
+
+    // Cambiar el texto del botón según el tema actual
+    if (calculator.classList.contains('dark-mode')) {
+        themeToggleBtn.innerText = 'Claro';
+    } else {
+        themeToggleBtn.innerText = 'Oscuro';
+    }
+}
+
+// Event Listener para el botón de cambio de tema
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);

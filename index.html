@@ -6,9 +6,15 @@
   <link rel="stylesheet" href="styles.css">
   <title>Calculadora</title>
 </head>
-<body>
+<body id="calculator">
+  <header class="nav">
+    <!-- Botón de cambio de tema -->
+    <button id="theme-toggle" class="theme-toggle">Oscuro</button>
+    <h1>CALCULATOR</h1>
+  </header>
 
-  <div class="calculadora">
+  <div class="main">
+    <div class="calculadora">
       <div class="display">
         <div class="history" id="history"></div>
         <div class="current" id="display"></div>
@@ -45,10 +51,13 @@
         <button onclick="appendValue('0')">0</button>
         <!-- Botón de Calcular -->
         <button onclick="calculate()" class="span-three">=</button>
-          
-          
       </div>
+    </div>
   </div>
+
+  <footer class="footer">
+    <p>Desarrollado por andressuarez.com.co</p>
+  </footer>
   
   <script src="script.js"></script>
 </body>
