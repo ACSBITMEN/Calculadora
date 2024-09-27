@@ -1,0 +1,125 @@
+/* Estilos generales */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #B7B7B7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos de la calculadora */
+.calculadora {
+  background-color: #f0f0f0;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px -1px 45px 4px rgba(0,0,0,0.17);
+}
+
+/* Estilos del display */
+.display {
+  background-color: #e4ffeb;
+  min-height: 4rem;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.history {
+  font-size: 18px;
+  color: #616161;
+  text-align: right;
+  min-height: 20px;
+  direction: ltr;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.current {
+  font-size: 32px;
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Estilos de los botones */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: .5rem 1rem 1.5rem 1rem;
+}
+
+button {
+  background-color: #e6e6e6;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #d4d4d4;
+}
+
+button:nth-child(-n+4) {
+  height: 50px;
+}
+
+button:last-child {
+  background-color: #d4d4d4;
+}
+
+.btn-operation {
+  background-color: #FFCF96;
+  border: 1px solid #e7c44f;
+}
+
+.btn-operation:hover {
+  background-color: #e9b97f;
+}
+
+.span-two {
+  background-color: #FFAAAA;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  border: 1px solid #fda6a6;
+}
+
+.btn-delete svg {
+  width: 20px;
+  height: 20px;
+}
+
+.span-two:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.span-three {
+  grid-column: span 2;
+  width: calc(60px * 2 + 10px); /* Ajustar ancho para abarcar 4 columnas y considerar los espacios entre ellas */
+}
+
+.span-Mas {
+  grid-row: span 2;
+  height: calc(60px * 2 + 10px); /* Ajustar ancho para abarcar 4 columnas y considerar los espacios entre ellas */
+}
