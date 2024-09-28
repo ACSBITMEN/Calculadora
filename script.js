@@ -6,7 +6,7 @@ let lastExpression = '';
 const displayElement = document.getElementById('display');
 const historyElement = document.getElementById('history');
 
-// Operadores permitidos
+// Operadores permitidos (faltante %)
 const operators = ['+', '-', '*', '/'];
 
 /**
@@ -94,7 +94,7 @@ function handleKeyPress(event) {
 }
 
 /**
- * Función para alternar entre modos claro y oscuro.
+ * Función para alternar entre modos claro y oscuro. temas
  */
 function toggleTheme() {
     const calculator = document.getElementById('calculator');
