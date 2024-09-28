@@ -4,9 +4,7 @@
   --bg-color-btn-theme-hover: #c7c7c7; /* Hover Botones */
   --text-color-btn-theme: #000; /* Texto Botones */
   --text-color-btn-theme-hover: #fff; /* Texto Botones */
-
   --bg-color-nav: #C7C8CC; /* Fondo Nav y Footer */
-
   --bg-color: #e6e6e6; /* Fondo Principal */
   --bg-color-calc: #E8E9ED; /* Fondo Calculadora */
   --border-calc: #000; /* Bordes Calculadora */
@@ -17,7 +15,7 @@
   --bg-color-btn-hover: #b8b8b8; /* Hover Botones */
   --text-color-btn: #000; /* Texto Botones */
   --bg-color-btn-operation: #FFCF96; /* Fondo Botones Operaciones */
-  --bg-color-btn-operation-hover: #DEA01D; /* Fondo Hover Botones Operaciones */
+  --bg-color-btn-operation-hover: #ffc074; /* Fondo Hover Botones Operaciones */
   --text-color-btn-operation: #000; /* Texto Botones Operaciones */
   --bg-color-btn-delete: #FFAAAA; /* Fondo Botones Delete / All Clear */
   --bg-color-btn-delete-hover: #ff8181; /* Fondo Hover Botones Delete / All Clear */
@@ -42,10 +40,10 @@
   --bg-color-btn-hover: #666; /* Hover Botones */
   --text-color-btn: #fff; /* Texto Botones */
   --bg-color-btn-operation: #4A90E2 ; /* Fondo Botones Operaciones */
-  --bg-color-btn-operation-hover: #404040; /* Fondo Hover Botones Operaciones */
+  --bg-color-btn-operation-hover: #559ff5; /* Fondo Hover Botones Operaciones */
   --text-color-btn-operation: #FFFFFF  ; /* Texto Botones Operaciones */
   --bg-color-btn-delete: #D35454 ; /* Fondo Botones Delete / All Clear */
-  --bg-color-btn-delete-hover: #d16161; /* Fondo Hover Botones Delete / All Clear */
+  --bg-color-btn-delete-hover: #df5c5c; /* Fondo Hover Botones Delete / All Clear */
   --text-color-btn-delete: #fff; /* Texto Botones Delete / All Clear */
 }
 
@@ -112,7 +110,6 @@ body {
   src: url('./Fonts/coffee_soda/Coffee\ Soda.ttf') format('truetype');
 }
 
-
 /* Estilos del contenedor de la calculadora */
 .main {
   background-color: var(--bg-color);
@@ -123,8 +120,6 @@ body {
   align-items: center;
   transition: .5s;
 }
-
-
 
 /* Estilos de la calculadora */
 .calculadora {
@@ -161,7 +156,6 @@ body {
   font-family: 'DS-Digital-BoldItalic';
   src: url('./Fonts/ds_digital/DS-DIGIT.TTF') format('truetype');
 }
-
 
 .history {
   font-size: 18px;
@@ -241,8 +235,6 @@ button:hover {
   height: calc(60px * 2 + 10px);
 }
 
-
-
 /* Estilos del pie de pagina */
 .footer {
   color: var(--text-color-btn);
@@ -250,8 +242,6 @@ button:hover {
   height: 10%;
   margin-bottom: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer div {
@@ -261,7 +251,7 @@ button:hover {
 
 .footer .by-acsb {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .footer .by-acsb a {
@@ -310,9 +300,9 @@ button:hover {
 .footer .foot-logos {
   display: flex;
   justify-content: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin-right: 10%;
+  margin-left: 5rem;
   align-items: center;
   transition: .5s;
 }
@@ -343,12 +333,17 @@ button:hover {
   margin: 0 7px 0 5px;
 }
 
-
-
 @media (max-width: 600px) {
   .nav h1 {
     font-size: 2em;
-    margin-left: 2rem;
+    margin-left: 5%;
+  }
+
+  .theme-toggle {
+    width: 4rem;
+    margin: 8px;
+    padding: 8px;
+    font-size: 14px;
   }
 
   .footer {
@@ -356,10 +351,16 @@ button:hover {
   }
 
   .footer > * {
-    scale: 0.8;
+    scale: 0.9;
+  }
+  
+    .footer .foot-logos {
+      margin: 0;
+    }
   }
 
-  .footer .foot-logos {
-    margin: 0;
+
+  .footer .by-acsb a {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-}
