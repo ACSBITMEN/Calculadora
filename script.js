@@ -99,12 +99,24 @@ function handleKeyPress(event) {
 function toggleTheme() {
     const calculator = document.getElementById('calculator');
     const themeToggleBtn = document.getElementById('theme-toggle');
+    const svgIcon = themeToggleBtn.querySelector('svg');
+    const textSpan = themeToggleBtn.querySelector('span');
 
     // Alternar la clase 'dark-mode' en el contenedor de la calculadora
     calculator.classList.toggle('dark-mode');
 
-    // Cambiar el texto del botón según el tema actual
-    themeToggleBtn.innerText = calculator.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
+    // Cambiar el ícono y el texto según el tema actual
+    if (calculator.classList.contains('dark-mode')) {
+        svgIcon.innerHTML = `
+            <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"/>
+        `;
+        textSpan.innerText = 'Dark';
+    } else {
+        svgIcon.innerHTML = `
+            <path d="M11 4a4 4 0 0 1 0 8H8a5 5 0 0 0 2-4 5 5 0 0 0-2-4zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8M0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5"/>
+        `;
+        textSpan.innerText = 'Claro';
+    }
 }
 
 // Event Listener para el botón de cambio de tema

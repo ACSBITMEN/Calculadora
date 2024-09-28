@@ -79,20 +79,25 @@ body {
 
 /* Estilos del botón de cambio de tema */
 .theme-toggle {
-  width: 5rem;
-  margin: 10px;
+  width: 4rem;
+  margin: 10px 10px 10px 15px;
   padding: 10px;
   background-color: var(--bg-color-btn-theme);
   color: var(--text-color-btn-theme);
   border: 1px solid var(--bg-color-btn-hover);
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1em;
   position: absolute;
 }
 
 .theme-toggle:hover {
   background-color: var(--bg-color-btn-theme-hover);
+}
+
+.theme-toggle svg {
+  width: 30px;
+  height: 30px;
 }
 
 /* Estilos del titulo principal */
@@ -336,8 +341,7 @@ button:hover {
 /* MEDIA QUERY PARA DISPOSITVOS MOVILES */
 @media (max-width: 600px) {
   .nav h1 {
-    font-size: 2em;
-    margin-left: 5%;
+    font-size: 2.3em;
   }
 
   .theme-toggle {
