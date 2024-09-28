@@ -1,38 +1,51 @@
 /* Variables de colores para el modo claro */
 :root {
-  --background-color: #C7C8CC;
-  --border-color: #000;
-  --background-color-calc: #E8E9ED;
-  --display-background-color: #e4ffeb;
-  --button-background-color: #dadada;
-  --button-border-color: #b8b8b8;
-  --button-text-color: #000;
-  --btn-operation-background-color: #FFCF96;
-  --btn-operation-border-color: #e7c44f;
-  --btn-delete-background-color: #FFAAAA;
-  --btn-delete-color: #c54c4c;
-  --btn-delete-border-color: #fda6a6;
-  --display-text-color: #000;
-  --history-text-color: #616161;
+  --bg-color-btn-theme: #dadada; /* Fondo Botones */
+  --bg-color-btn-theme-hover: #c7c7c7; /* Hover Botones */
+  --text-color-btn-theme: #000; /* Texto Botones */
+  --text-color-btn-theme-hover: #fff; /* Texto Botones */
+
+  --bg-color-navFoot: #C7C8CC; /* Fondo Nav y Footer */
+
+  --bg-color: #e6e6e6; /* Fondo Principal */
+  --bg-color-calc: #E8E9ED; /* Fondo Calculadora */
+  --border-calc: #000; /* Bordes Calculadora */
+  --bg-color-display: #e4ffeb; /* Display Calculadora */
+  --display-text-color: #000; /* Texto Display Calculadora */
+  --history-text-color: #616161; /* Texto History Display Calculadora */
+  --bg-color-btn: #dadada; /* Fondo Botones */
+  --bg-color-btn-hover: #b8b8b8; /* Hover Botones */
+  --text-color-btn: #000; /* Texto Botones */
+  --bg-color-btn-operation: #FFCF96; /* Fondo Botones Operaciones */
+  --bg-color-btn-operation-hover: #DEA01D; /* Fondo Hover Botones Operaciones */
+  --text-color-btn-operation: #000; /* Texto Botones Operaciones */
+  --bg-color-btn-delete: #FFAAAA; /* Fondo Botones Delete / All Clear */
+  --bg-color-btn-delete-hover: #ff8181; /* Fondo Hover Botones Delete / All Clear */
+  --text-color-btn-delete: #c54c4c; /* Texto Botones Delete / All Clear */
 }
 
 /* Variables de colores para el modo oscuro */
 .dark-mode {
-  --background-color: #242424;
-  --border-color: #19202b;
-  --background-color-calc: #263142;
-  --display-background-color: #e4ffeb;
-  --button-background-color: #555;
-  --button-border-color: #666;
-  --button-text-color: #fff;
-  --btn-operation-background-color: #263142;
-  --btn-operation-color: #F4CE14;
-  --btn-operation-border-color: #FF7F50;
-  --btn-delete-background-color: #FFAAAA;
-  --btn-delete-color: #c54c4c;
-  --btn-delete-border-color: #FF4500;
-  --display-text-color: #000;
-  --history-text-color: #616161;
+  --bg-color-btn-theme: #242424; /* Fondo Botones */
+  --bg-color-btn-theme-hover: #000; /* Hover Botones */
+  --text-color-btn-theme: #fff; /* Texto Botones */
+  --text-color-btn-theme-hover: #000; /* Texto Botones */
+  --bg-color-navFoot: #181C14; /* Fondo Nav y Footer */
+  --bg-color: #303030; /* Fondo Principal */
+  --bg-color-calc: #1E1E1E ; /* Fondo Calculadora */
+  --border-calc: #19202b; /* Bordes Calculadora */
+  --bg-color-display: #e4f0ff; /* Display Calculadora */
+  --display-text-color: #000; /* Texto Display Calculadora */
+  --history-text-color: #616161; /* Texto History Display Calculadora */
+  --bg-color-btn: #555; /* Fondo Botones */
+  --bg-color-btn-hover: #666; /* Hover Botones */
+  --text-color-btn: #fff; /* Texto Botones */
+  --bg-color-btn-operation: #4A90E2 ; /* Fondo Botones Operaciones */
+  --bg-color-btn-operation-hover: #404040; /* Fondo Hover Botones Operaciones */
+  --text-color-btn-operation: #FFFFFF  ; /* Texto Botones Operaciones */
+  --bg-color-btn-delete: #D35454 ; /* Fondo Botones Delete / All Clear */
+  --bg-color-btn-delete-hover: #d16161; /* Fondo Hover Botones Delete / All Clear */
+  --text-color-btn-delete: #fff; /* Texto Botones Delete / All Clear */
 }
 
 /* Estilos generales */
@@ -42,7 +55,7 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,50 +64,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Estilos de la barra de navegacion */
 .nav {
-  background-color: #263142;
+  background-color: var(--bg-color-navFoot);
   color: #fff;
   width: 100%;
   height: 10%;
+  position: relative;
   display: flex;
   align-items: center;
-}
-
-.nav h1 {
-  color: #fff;
-  width: 100%;
-}
-
-.main {
-  background-color: var(--background-color);
-  width: 100%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  background-color: #263142;
-  color: #fff;
-  width: 100%;
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Estilos de la calculadora */
-.calculadora {
-  background-color: var(--background-color-calc);
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  -webkit-box-shadow: 4px 4px 1px 0px rgba(0,0,0,0.88);
-  -moz-box-shadow: 4px 4px 1px 0px rgba(0,0,0,0.88);
-  box-shadow: 4px 4px 1px 0px rgba(0,0,0,0.88);
+  border-bottom: 2px solid var(--bg-color-btn);
+  transition: .5s;
 }
 
 /* Estilos del botón de cambio de tema */
@@ -102,21 +82,75 @@ body {
   width: 5rem;
   margin: 10px;
   padding: 10px;
-  background-color: var(--button-border-color);
-  color: var(--button-text-color);
-  border: 1px solid var(--button-border-color);
+  background-color: var(--bg-color-btn-theme);
+  color: var(--text-color-btn-theme);
+  border: 1px solid var(--bg-color-btn-hover);
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  position: absolute;
 }
 
 .theme-toggle:hover {
-  background-color: var(--button-background-color);
+  background-color: var(--bg-color-btn-theme-hover);
+}
+
+/* Estilos del titulo principal */
+.nav h1 {
+  width: 100%;
+  color: var(--text-color-btn);
+  text-align: center;
+  font-size: 3em;
+  font-weight: 100;
+  font-family: 'DS-Soda', sans-serif;
+}
+@font-face {
+  font-family: 'DS-Soda';
+  src: url('./Fonts/coffee_soda/Coffee\ Soda.ttf') format('truetype');
+}
+
+
+/* Estilos del contenedor de la calculadora */
+.main {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+/* Estilos del pie de pagina */
+.footer {
+  background-color: var(--bg-color-navFoot);
+  color: var(--text-color-btn);
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Estilos de la calculadora */
+.calculadora {
+  background-color: var(--bg-color-calc);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border-calc);
+  border-radius: 8px;
+  -webkit-box-shadow: 4px 4px 1px 0px rgba(0,0,0,0.88);
+  -moz-box-shadow: 4px 4px 1px 0px rgba(0,0,0,0.88);
+  box-shadow: 4px 4px 1px 0px rgba(0,0,0,0.88);
+  transition: .5s;
 }
 
 /* Estilos del display */
 .display {
-  background-color: var(--display-background-color);
+  background-color: var(--bg-color-display);
   min-height: 4rem;
   margin: 10px;
   padding: 10px;
@@ -129,10 +163,29 @@ body {
   -webkit-box-shadow: inset 2px 2px 1px 0px rgba(0,0,0,0.88);
   -moz-box-shadow: inset 2px 2px 1px 0px rgba(0,0,0,0.88);
   box-shadow: inset 2px 2px 1px 0px rgba(0,0,0,0.88);
+  font-family: 'DS-Digital-BoldItalic', sans-serif;
 }
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('./Fonts/ds_digital/DS-DIGI.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'DS-Digital-Bold';
+  src: url('./Fonts/ds_digital/DS-DIGIB.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'DS-Digital-Italic';
+  src: url('./Fonts/ds_digital/DS-DIGII.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'DS-Digital-BoldItalic';
+  src: url('./Fonts/ds_digital/DS-DIGIT.TTF') format('truetype');
+}
+
 
 .history {
   font-size: 18px;
+  font-weight: 600;
   color: var(--history-text-color);
   text-align: right;
   min-height: 20px;
@@ -142,7 +195,8 @@ body {
 }
 
 .current {
-  font-size: 32px;
+  font-size: 2.3em;
+  font-weight: 700;
   color: var(--display-text-color);
   border-radius: 5px;
   overflow: hidden;
@@ -160,8 +214,8 @@ body {
 }
 
 button {
-  background-color: var(--button-background-color);
-  color: var(--button-text-color);
+  background-color: var(--bg-color-btn);
+  color: var(--text-color-btn);
   width: 60px;
   height: 60px;
   font-size: 24px;
@@ -173,27 +227,28 @@ button {
 }
 
 button:hover {
-  background-color: var(--button-border-color);
+  background-color: var(--bg-color-btn-hover);
+  transition: 0s;
 }
 
 .btn-operation {
-  background-color: var(--btn-operation-background-color);
-  color: var(--btn-operation-color);
+  background-color: var(--bg-color-btn-operation);
+  color: var(--text-color-btn-operation);
 }
 
 .btn-operation:hover {
-  background-color: var(--btn-operation-color-hover);
+  background-color: var(--bg-color-btn-operation-hover);
 }
 
-.span-two {
-  background-color: var(--btn-delete-background-color);
-  color: var(--btn-delete-color);
+.btn-delete {
+  background-color: var(--bg-color-btn-delete);
+  color: var(--text-color-btn-delete);
   font-size: 1em;
   font-weight: 600;
 }
 
-.span-two:hover {
-  background-color: var(--btn-delete-color-hover);
+.btn-delete:hover {
+  background-color: var(--bg-color-btn-delete-hover);
 }
 
 .span-three {

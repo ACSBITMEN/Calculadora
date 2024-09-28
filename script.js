@@ -141,9 +141,9 @@ function toggleTheme() {
 
     // Cambiar el texto del botón según el tema actual
     if (calculator.classList.contains('dark-mode')) {
-        themeToggleBtn.innerText = 'Claro';
+        themeToggleBtn.innerText = 'Modo Claro';
     } else {
-        themeToggleBtn.innerText = 'Oscuro';
+        themeToggleBtn.innerText = 'Modo Oscuro';
     }
 }
 

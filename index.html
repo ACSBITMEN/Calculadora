@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importacion de hoja de estilos -->
   <link rel="stylesheet" href="styles.css">
   <title>Calculadora</title>
 </head>
+
 <body id="calculator">
   <header class="nav">
     <!-- Botón de cambio de tema -->
-    <button id="theme-toggle" class="theme-toggle">Oscuro</button>
-    <h1>CALCULATOR</h1>
+    <button id="theme-toggle" class="theme-toggle">Modo Oscuro</button>
+    <h1 class="">CALCULADORA</h1>
   </header>
 
   <div class="main">
@@ -21,12 +24,12 @@
       </div>
       <div class="botones">
         <!-- Primera fila -->
-        <button onclick="deleteLastDigit()" class="span-two btn-delete">
+        <button onclick="deleteLastDigit()" class="btn-delete">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
           </svg>
         </button> <!-- Botón de retroceso -->
-        <button onclick="clearDisplay()" class="span-two">AC</button> <!-- Botón de limpiar -->
+        <button onclick="clearDisplay()" class="btn-delete">AC</button> <!-- Botón de limpiar -->
         <button onclick="appendValue('/')" class="btn-operation">÷</button>
         <button onclick="appendValue('*')" class="btn-operation">×</button>
         
