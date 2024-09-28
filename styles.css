@@ -248,19 +248,21 @@ button:hover {
   color: var(--text-color-btn);
   width: 100%;
   height: 10%;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 5s;
 }
 
 .footer div {
   width: 50%;
   height: 100%;
+}
+
+.footer .by-acsb {
   display: flex;
   justify-content: center;
 }
-
 
 .footer .by-acsb a {
   display: flex;
@@ -281,7 +283,7 @@ button:hover {
   -2px 0px 0px black, 
   0px -2px 0px black;
   font-family: 'DS-Heap', sans-serif;
-  transition: .45s;
+  transition: .4s;
 }
 @font-face {
   font-family: 'DS-Heap';
@@ -292,22 +294,24 @@ button:hover {
   color: #ff7e5f;
 }
 
-.footer .by-acsb a:hover img {
-  background-image: linear-gradient(to right, #ff7e5f, #feb47b);
-  border: 2px solid black;
-}
-
 .footer .by-acsb img {
   width: 3rem;
   background-color: var(--bg-color-nav);
   border-radius: 30px;
   padding: 2px;
   margin-right: 5px;
-  transition: .4s;
+  border: 2px solid black;
+}
+.footer .by-acsb a:hover img {
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: 2px solid black;
 }
 
 .footer .foot-logos {
+  display: flex;
+  justify-content: center;
   justify-content: flex-end;
+  flex-wrap: wrap;
   margin-right: 10%;
   align-items: center;
   transition: .5s;
@@ -337,4 +341,25 @@ button:hover {
   width: 30px;
   height: 30px;
   margin: 0 7px 0 5px;
+}
+
+
+
+@media (max-width: 600px) {
+  .nav h1 {
+    font-size: 2em;
+    margin-left: 2rem;
+  }
+
+  .footer {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer > * {
+    scale: 0.8;
+  }
+
+  .footer .foot-logos {
+    margin: 0;
+  }
 }
