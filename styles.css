@@ -24,7 +24,7 @@
 
 /* Variables de colores para el modo oscuro */
 .dark-mode {
-  --bg-color: #303030; /* Fondo Principal */
+  --bg-color: #373737; /* Fondo Principal */
 
   --bg-color-btn-theme: #242424; /* Fondo Botones */
   --bg-color-btn-theme-hover: #000; /* Hover Botones */
@@ -225,12 +225,12 @@ button:hover {
   background-color: var(--bg-color-btn-delete-hover);
 }
 
-.span-three {
+.btn-igual {
   grid-column: span 2;
   width: calc(60px * 2 + 10px);
 }
 
-.span-Mas {
+.btn-suma {
   grid-row: span 2;
   height: calc(60px * 2 + 10px);
 }
@@ -333,6 +333,7 @@ button:hover {
   margin: 0 7px 0 5px;
 }
 
+/* MEDIA QUERY PARA DISPOSITVOS MOVILES */
 @media (max-width: 600px) {
   .nav h1 {
     font-size: 2em;

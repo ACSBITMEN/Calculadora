@@ -14,19 +14,12 @@ const operators = ['+', '-', '*', '/'];
  * @param {string} value - El valor a agregar a la expresión.
  */
 function appendValue(value) {
-    // Evitar agregar operadores al inicio de la expresión
-    if (expression === '' && operators.includes(value)) return;
-
-    // Evitar operadores consecutivos
-    if (operators.includes(value) && operators.includes(expression.slice(-1))) {
-        // Reemplazar el operador anterior por el nuevo
-        expression = expression.slice(0, -1) + value;
-    } else {
-        // Agregar el valor a la expresión
-        expression += value;
+    // Evitar operadores al inicio de la expresión o consecutivos
+    if ((expression === '' && operators.includes(value)) || 
+        (operators.includes(value) && operators.includes(expression.slice(-1)))) {
+        return;
     }
-
-    // Actualizar el display con la expresión actualizada
+    expression += value;
     updateDisplay();
 }
 
@@ -59,32 +52,18 @@ function deleteLastDigit() {
  * Función para evaluar la expresión actual y mostrar el resultado.
  */
 function calculate() {
-    // Verificar si la expresión está vacía
-    if (expression === '') {
-        // No hay nada que calcular
-        return;
-    }
-
-    // Verificar si la expresión termina con un operador
-    if (operators.includes(expression.slice(-1))) {
-        // No hacer nada si la expresión termina con un operador
-        return;
-    }
+    if (expression === '' || operators.includes(expression.slice(-1))) return;
 
     try {
-        // Evaluar la expresión matemática
-        const result = eval(expression);
+        // Evaluar la expresión matemática de manera segura
+        const result = new Function('return ' + expression)();
 
-        // Actualizar el historial con la expresión
-        lastExpression = expression + ' = ';
+        // Actualizar el historial y el display
+        lastExpression = `${expression} =`;
         historyElement.innerText = lastExpression;
-
-        // Actualizar la expresión actual con el resultado obtenido
         expression = result.toString();
-        displayElement.innerText = expression;
-
-    } catch (error) {
-        // Mostrar mensaje de error y reiniciar la expresión
+        updateDisplay();
+    } catch {
         displayElement.innerText = 'Error';
         expression = '';
     }
@@ -102,36 +81,21 @@ document.addEventListener('keydown', handleKeyPress);
 function handleKeyPress(event) {
     const key = event.key;
 
-    // Lista de teclas permitidas
-    const allowedKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','+', '-', '*', '/', '.', 'Enter', 'Backspace', 'Delete'];
-
     // Si la tecla presionada está permitida
-    if (allowedKeys.includes(key)) {
-        event.preventDefault(); // Prevenir acciones predeterminadas del navegador
-
-        if (key >= '0' && key <= '9') {
-            // Agregar el número a la expresión
-            appendValue(key);
-        } else if (operators.includes(key)) {
-            // Agregar el operador a la expresión
-            appendValue(key);
-        } else if (key === '.') {
-            // Agregar el punto decimal a la expresión
-            appendValue(key);
-        } else if (key === 'Enter') {
-            // Calcular el resultado de la expresión
-            calculate();
-        } else if (key === 'Backspace') {
-            // Eliminar el último dígito de la expresión
-            deleteLastDigit();
-        } else if (key === 'Delete') {
-            // Limpiar la expresión y el historial
-            clearDisplay();
-        }
+    if (/^[0-9+\-*/.]$/.test(key)) {
+        appendValue(key);
+    } else if (key === 'Enter') {
+        calculate();
+    } else if (key === 'Backspace') {
+        deleteLastDigit();
+    } else if (key === 'Delete') {
+        clearDisplay();
     }
 }
 
-// Función para alternar entre modos claro y oscuro
+/**
+ * Función para alternar entre modos claro y oscuro.
+ */
 function toggleTheme() {
     const calculator = document.getElementById('calculator');
     const themeToggleBtn = document.getElementById('theme-toggle');
@@ -140,11 +104,7 @@ function toggleTheme() {
     calculator.classList.toggle('dark-mode');
 
     // Cambiar el texto del botón según el tema actual
-    if (calculator.classList.contains('dark-mode')) {
-        themeToggleBtn.innerText = 'Modo Claro';
-    } else {
-        themeToggleBtn.innerText = 'Modo Oscuro';
-    }
+    themeToggleBtn.innerText = calculator.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
 }
 
 // Event Listener para el botón de cambio de tema
