@@ -166,18 +166,6 @@ body {
   font-family: 'DS-Digital-BoldItalic', sans-serif;
 }
 @font-face {
-  font-family: 'DS-Digital';
-  src: url('./Fonts/ds_digital/DS-DIGI.TTF') format('truetype');
-}
-@font-face {
-  font-family: 'DS-Digital-Bold';
-  src: url('./Fonts/ds_digital/DS-DIGIB.TTF') format('truetype');
-}
-@font-face {
-  font-family: 'DS-Digital-Italic';
-  src: url('./Fonts/ds_digital/DS-DIGII.TTF') format('truetype');
-}
-@font-face {
   font-family: 'DS-Digital-BoldItalic';
   src: url('./Fonts/ds_digital/DS-DIGIT.TTF') format('truetype');
 }
