@@ -5,7 +5,7 @@
   --text-color-btn-theme: #000; /* Texto Botones */
   --text-color-btn-theme-hover: #fff; /* Texto Botones */
 
-  --bg-color-navFoot: #C7C8CC; /* Fondo Nav y Footer */
+  --bg-color-nav: #C7C8CC; /* Fondo Nav y Footer */
 
   --bg-color: #e6e6e6; /* Fondo Principal */
   --bg-color-calc: #E8E9ED; /* Fondo Calculadora */
@@ -26,12 +26,13 @@
 
 /* Variables de colores para el modo oscuro */
 .dark-mode {
+  --bg-color: #303030; /* Fondo Principal */
+
   --bg-color-btn-theme: #242424; /* Fondo Botones */
   --bg-color-btn-theme-hover: #000; /* Hover Botones */
   --text-color-btn-theme: #fff; /* Texto Botones */
   --text-color-btn-theme-hover: #000; /* Texto Botones */
-  --bg-color-navFoot: #181C14; /* Fondo Nav y Footer */
-  --bg-color: #303030; /* Fondo Principal */
+  --bg-color-nav: #181C14; /* Fondo Nav y Footer */
   --bg-color-calc: #1E1E1E ; /* Fondo Calculadora */
   --border-calc: #19202b; /* Bordes Calculadora */
   --bg-color-display: #e4f0ff; /* Display Calculadora */
@@ -62,11 +63,12 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
+  transition: .5s;
 }
 
 /* Estilos de la barra de navegacion */
 .nav {
-  background-color: var(--bg-color-navFoot);
+  background-color: var(--bg-color-nav);
   color: #fff;
   width: 100%;
   height: 10%;
@@ -74,7 +76,7 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 2px solid var(--bg-color-btn);
-  transition: .5s;
+  transition: .4s;
 }
 
 /* Estilos del botón de cambio de tema */
@@ -103,6 +105,7 @@ body {
   font-size: 3em;
   font-weight: 100;
   font-family: 'DS-Soda', sans-serif;
+  transition: .4s;
 }
 @font-face {
   font-family: 'DS-Soda';
@@ -119,17 +122,6 @@ body {
   justify-content: center;
   align-items: center;
   transition: .5s;
-}
-
-/* Estilos del pie de pagina */
-.footer {
-  background-color: var(--bg-color-navFoot);
-  color: var(--text-color-btn);
-  width: 100%;
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 
@@ -247,4 +239,102 @@ button:hover {
 .span-Mas {
   grid-row: span 2;
   height: calc(60px * 2 + 10px);
+}
+
+
+
+/* Estilos del pie de pagina */
+.footer {
+  color: var(--text-color-btn);
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 5s;
+}
+
+.footer div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.footer .by-acsb a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.6em;
+}
+
+.footer .by-acsb p {
+  color: #fff;
+  text-shadow: 3px 3px 0px black, 
+  3px -3px 0px black, 
+  -3px 3px 0px black, 
+  -2px -2px 0px black,
+  2px 0px 0px black, 
+  0px 2px 0px black, 
+  -2px 0px 0px black, 
+  0px -2px 0px black;
+  font-family: 'DS-Heap', sans-serif;
+  transition: .45s;
+}
+@font-face {
+  font-family: 'DS-Heap';
+  src: url('./Fonts/heavy_heap/heavy\ heap\ rg.otf') format('truetype');
+}
+
+.footer .by-acsb a:hover p {
+  color: #ff7e5f;
+}
+
+.footer .by-acsb a:hover img {
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: 2px solid black;
+}
+
+.footer .by-acsb img {
+  width: 3rem;
+  background-color: var(--bg-color-nav);
+  border-radius: 30px;
+  padding: 2px;
+  margin-right: 5px;
+  transition: .4s;
+}
+
+.footer .foot-logos {
+  justify-content: flex-end;
+  margin-right: 10%;
+  align-items: center;
+  transition: .5s;
+}
+
+.footer .foot-logos a {
+  display: flex;
+  background-color: var(--bg-color-btn-theme);
+  color: var(--text-color-btn);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid var(--text-color-btn);
+  border-radius: 5px;
+  padding: 5px 10px 5px 2px;
+}
+
+.footer .foot-logos a {
+  margin-left: .5rem;
+}
+
+.footer .foot-logos a:hover {
+  background-color: var(--bg-color-btn-theme-hover);
+}
+
+.footer .foot-logos a svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 7px 0 5px;
 }
