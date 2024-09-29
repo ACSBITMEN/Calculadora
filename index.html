@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +23,16 @@
   </header>
 
   <div class="main">
+    <!-- Calculadora -->
     <div class="calculadora">
+
+      <!-- Pantalla Calculadora -->
       <div class="display">
         <div class="history" id="history"></div>
         <div class="current" id="display"></div>
       </div>
+
+      <!-- Botones calculadora -->
       <div class="botones">
         <!-- Primera fila -->
         <button onclick="deleteLastDigit()" class="btn-delete">
@@ -56,6 +60,7 @@
         <button onclick="appendValue('1')">1</button>
         <button onclick="appendValue('2')">2</button>
         <button onclick="appendValue('3')">3</button>
+
         <!-- Quinta fila -->
         <button onclick="appendValue('.')">.</button>
         <button onclick="appendValue('0')">0</button>
@@ -66,12 +71,15 @@
   </div>
 
   <footer class="footer">
+    <!-- Espacio informativo del Desarrollador -->
     <div class="by-acsb">
       <a href="https://andressuarez.com.co/" target="_blank">
         <img src="./assets/logos/logo-acsb.png" alt="logo-acsb">
         <p>andressuarez.com.co</p>
       </a>
     </div>
+
+    <!-- Redes Sociales -->
     <div class="foot-logos">
       <a href="https://github.com/ACSBITMEN" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -87,7 +95,9 @@
       </a>
     </div>
   </footer>
-  
+
+  <!-- archivos JS -->
   <script src="script.js"></script>
+
 </body>
 </html>

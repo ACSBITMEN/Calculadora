@@ -1,22 +1,28 @@
 /* Variables de colores para el modo claro */
 :root {
-  --bg-color-btn-theme: #dadada; /* Fondo Botones */
-  --bg-color-btn-theme-hover: #c7c7c7; /* Hover Botones */
-  --text-color-btn-theme: #000; /* Texto Botones */
-  --text-color-btn-theme-hover: #fff; /* Texto Botones */
-  --bg-color-nav: #C7C8CC; /* Fondo Nav y Footer */
+  --bg-color-nav: #C7C8CC; /* Fondo Barra Nav */
   --bg-color: #e6e6e6; /* Fondo Principal */
+
+  --bg-color-btn-theme: #dadada; /* Fondo Boton Theme */
+  --text-color-btn-theme: #000; /* Texto Boton Theme */
+  --bg-color-btn-theme-hover: #c7c7c7; /* Hover Fondo Boton Theme */
+  --text-color-btn-theme-hover: #fff; /* Hover Texto Boton Theme */
+
   --bg-color-calc: #E8E9ED; /* Fondo Calculadora */
   --border-calc: #000; /* Bordes Calculadora */
   --bg-color-display: #e4ffeb; /* Display Calculadora */
+
   --display-text-color: #000; /* Texto Display Calculadora */
   --history-text-color: #616161; /* Texto History Display Calculadora */
+
   --bg-color-btn: #dadada; /* Fondo Botones */
   --bg-color-btn-hover: #b8b8b8; /* Hover Botones */
   --text-color-btn: #000; /* Texto Botones */
+
   --bg-color-btn-operation: #FFCF96; /* Fondo Botones Operaciones */
   --bg-color-btn-operation-hover: #ffc074; /* Fondo Hover Botones Operaciones */
   --text-color-btn-operation: #000; /* Texto Botones Operaciones */
+
   --bg-color-btn-delete: #FFAAAA; /* Fondo Botones Delete / All Clear */
   --bg-color-btn-delete-hover: #ff8181; /* Fondo Hover Botones Delete / All Clear */
   --text-color-btn-delete: #c54c4c; /* Texto Botones Delete / All Clear */
